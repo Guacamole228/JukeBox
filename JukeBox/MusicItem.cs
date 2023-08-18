@@ -36,8 +36,8 @@ namespace JukeBox
 
         void HoverRecursive(Control element)
         {
-            musicArea.MouseEnter += MusicArea_MouseEnter;
-            musicArea.MouseLeave += MusicArea_MouseLeave;
+            element.MouseEnter += MusicArea_MouseEnter;
+            element.MouseLeave += MusicArea_MouseLeave;
 
 
             for (int i = 0; i < element.Controls.Count; i++)
