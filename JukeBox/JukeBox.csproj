@@ -24,7 +24,40 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="music\The-Last-Of-us-Theme-song.wav">
+    <None Update="music\cfo_-_wwe_the_second_coming_seth_rollins_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\dovakin_-_dovakin_skyrim_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\gimn_sm_pank_-_cm_punk_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\glad_valakas_-_ja_vitru_svoju_ljubov_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\hh_kit_ti_mamu_mau_hh_-_mariarti_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\joey_batey_-_toss_a_coin_to_your_witcher_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\lindsey_stirling_-_carol_of_the_bells_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\lindsey_stirling_-_crystallize_-_lindsey_stirling_-_crystallize_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\los_bandoleros_don_omar_ft_tego_calderon_-_bandoleros_ost_forsazh_3_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\ot_vinta_-_-_ot_vinta_-_bassboosted_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\rollin_air_raid_vehicle_-_rollin_air_raid_vehicle_%28z3.fm%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="music\tjazhelij_rok_-_cm_punk_this_fire_burns_%28z3.fm%29.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

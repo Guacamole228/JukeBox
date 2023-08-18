@@ -9,7 +9,7 @@ namespace JukeBox
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string[] tracks = Directory.GetFiles("music", "*.wav");
+            string[] tracks = Directory.GetFiles("music", "*.mp3");
 
             for (int i = 0; i < tracks.Length; i++)
             {
