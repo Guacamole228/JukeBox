@@ -16,11 +16,8 @@ namespace JukeBox
         {
             InitializeComponent();
             HoverRecursive(musicArea);
-           // Click.Recursive(musicArea);
-
-
-
-
+            ClickRecursive(musicArea);
+            DoubleClickRecursive(musicArea);
 
         }
 
@@ -36,8 +33,8 @@ namespace JukeBox
 
         void HoverRecursive(Control element)
         {
-            musicArea.MouseEnter += MusicArea_MouseEnter;
-            musicArea.MouseLeave += MusicArea_MouseLeave;
+            element.MouseEnter += MusicArea_MouseEnter;
+            element.MouseLeave += MusicArea_MouseLeave;
 
 
             for (int i = 0; i < element.Controls.Count; i++)
@@ -70,8 +67,25 @@ namespace JukeBox
         {
             BackColor = Color.FromArgb(70, 70, 70);
         }
+        void DoubleClickRecursive(Control element)
+        {
+            element.MouseDoubleClick += Element_MouseDoubleClick;
+            element.MouseDown += Element_MouseDown;
+            element.MouseUp += Element_MouseUp;
 
 
+            for (int i = 0; i < element.Controls.Count; i++)
+            {
+                DoubleClickRecursive(element.Controls[i]);
+            }
+
+
+        }
+
+        private void Element_MouseDoubleClick(object? sender, MouseEventArgs e)
+        {
+            
+        }
 
         [Category("Властивості трека")]
         public string Title

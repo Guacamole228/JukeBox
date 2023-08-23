@@ -5,7 +5,10 @@ namespace JukeBox
         public Form1()
         {
             InitializeComponent();
+            customizeDesing();
+            hideSubMenu();  
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -16,13 +19,64 @@ namespace JukeBox
                 FileInfo file = new FileInfo(tracks[i]);
 
                 var track = new MusicItem();
-                track.Title = file.Name.Replace(".wav", " ");
+                track.Title = file.Name.Replace(".mp3", " ");
                 track.Description = file.CreationTime.ToString("yyyy  MMMM ");
                 musicItemArea.Controls.Add(track);
-
-
             }
 
+        }
+        private void customizeDesing()
+        {
+            panelMediaSubMenu.Visible = false;
+
+        }
+        private void hideSubMenu()
+        {
+            if (panelMediaSubMenu.Visible == true)
+            {
+                panelMediaSubMenu.Visible = false;
+            }
+
+        }
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+
+                subMenu.Visible = false;
+
+        }
+
+        private void btnMedia_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelMediaSubMenu);
+        }
+
+        private void buttonplay_Click(object sender, EventArgs e)
+        {
+            openDetiForm(new Form2());
+
+            hideSubMenu();
+
+
+        }
+        private Form activeForm = null!;
+        private void openDetiForm(Form DetiForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = DetiForm;
+            DetiForm.TopLevel = false;
+            DetiForm.FormBorderStyle = FormBorderStyle.None;
+            DetiForm.Dock = DockStyle.Fill;
+            panelDeti.Controls.Add(DetiForm);
+            panelDeti.Tag = DetiForm;
+            DetiForm.BringToFront();
+            DetiForm.Show();
         }
     }
 }
