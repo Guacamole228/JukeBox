@@ -12,6 +12,9 @@ namespace JukeBox
 {
     public partial class MusicItem : UserControl
     {
+        EventHandler playMusic;
+        string file;
+       
         public MusicItem()
         {
             InitializeComponent();
@@ -84,8 +87,43 @@ namespace JukeBox
 
         private void Element_MouseDoubleClick(object? sender, MouseEventArgs e)
         {
+            if (playMusic != null)
+            {
+                playMusic.Invoke(file, EventArgs.Empty);
+            }
             
         }
+
+        public string File
+        {
+            get
+            {
+                if (file == null)
+                {
+                    return "123";
+                }
+                return file;
+            }
+            set
+            {
+                file = value;
+            }
+        }
+
+        public event EventHandler? PlayMusic
+        {
+            add
+            {
+                playMusic += value;
+            }
+            remove
+            {
+                playMusic -= value;
+            }
+        }
+
+
+
 
         [Category("Властивості трека")]
         public string Title

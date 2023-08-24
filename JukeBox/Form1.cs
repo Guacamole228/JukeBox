@@ -1,3 +1,5 @@
+using NAudio.Wave;
+
 namespace JukeBox
 {
     public partial class Form1 : Form
@@ -19,12 +21,24 @@ namespace JukeBox
                 FileInfo file = new FileInfo(tracks[i]);
 
                 var track = new MusicItem();
+                track.File = file.FullName;
+                track.PlayMusic += Track_PlayMusic;
                 track.Title = file.Name.Replace(".mp3", " ");
                 track.Description = file.CreationTime.ToString("yyyy  MMMM ");
                 musicItemArea.Controls.Add(track);
             }
 
         }
+
+        private void Track_PlayMusic(object? sender, EventArgs e)
+        {
+            string path = sender!.ToString()!;
+            WaveOut wave = new WaveOut();
+            AudioFileReader reader = new AudioFileReader(path);
+            wave.Init(reader);
+            wave.Play();
+        }
+
         private void customizeDesing()
         {
             panelMediaSubMenu.Visible = false;
