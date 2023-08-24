@@ -8,7 +8,7 @@ namespace JukeBox
         {
             InitializeComponent();
             customizeDesing();
-            hideSubMenu();  
+            hideSubMenu();
         }
 
 
@@ -18,13 +18,10 @@ namespace JukeBox
 
             for (int i = 0; i < tracks.Length; i++)
             {
-                FileInfo file = new FileInfo(tracks[i]);
 
-                var track = new MusicItem();
-                track.File = file.FullName;
+
+                var track = new MusicItem(tracks[i]);
                 track.PlayMusic += Track_PlayMusic;
-                track.Title = file.Name.Replace(".mp3", " ");
-                track.Description = file.CreationTime.ToString("yyyy  MMMM ");
                 musicItemArea.Controls.Add(track);
             }
 
@@ -32,11 +29,8 @@ namespace JukeBox
 
         private void Track_PlayMusic(object? sender, EventArgs e)
         {
-            string path = sender!.ToString()!;
-            WaveOut wave = new WaveOut();
-            AudioFileReader reader = new AudioFileReader(path);
-            wave.Init(reader);
-            wave.Play();
+            MusicItem music = (MusicItem)sender!;
+            musicGayBar1.PlayPause(music);
         }
 
         private void customizeDesing()

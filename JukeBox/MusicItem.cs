@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace JukeBox
 {
@@ -17,10 +18,23 @@ namespace JukeBox
        
         public MusicItem()
         {
+           
             InitializeComponent();
             HoverRecursive(musicArea);
             ClickRecursive(musicArea);
             DoubleClickRecursive(musicArea);
+
+        }
+
+        public MusicItem(string filePath) : this()
+        {
+            FileInfo file = new FileInfo(filePath);
+          File = file.FullName;
+
+           Title = file.Name.Replace(".mp3", " ");
+           Description = file.CreationTime.ToString("yyyy  MMMM ");
+
+
 
         }
 
@@ -89,7 +103,7 @@ namespace JukeBox
         {
             if (playMusic != null)
             {
-                playMusic.Invoke(file, EventArgs.Empty);
+                playMusic.Invoke(this, EventArgs.Empty);
             }
             
         }

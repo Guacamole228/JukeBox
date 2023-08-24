@@ -35,12 +35,14 @@
             btnMedia = new Button();
             panel1 = new Panel();
             panelDown = new Panel();
+            musicGayBar1 = new MusicGayBar();
             panelDeti = new Panel();
             musicItemArea = new FlowLayoutPanel();
             panelLeft.SuspendLayout();
             panelMediaSubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonplay).BeginInit();
+            panelDown.SuspendLayout();
             panelDeti.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             panelLeft.Location = new Point(2, 2);
             panelLeft.Name = "panelLeft";
             panelLeft.Padding = new Padding(5);
-            panelLeft.Size = new Size(200, 499);
+            panelLeft.Size = new Size(200, 503);
             panelLeft.TabIndex = 0;
             // 
             // panelMediaSubMenu
@@ -109,11 +111,21 @@
             // 
             // panelDown
             // 
+            panelDown.Controls.Add(musicGayBar1);
             panelDown.Dock = DockStyle.Bottom;
-            panelDown.Location = new Point(2, 501);
+            panelDown.Location = new Point(2, 505);
             panelDown.Name = "panelDown";
-            panelDown.Size = new Size(1229, 100);
+            panelDown.Size = new Size(1229, 96);
             panelDown.TabIndex = 1;
+            // 
+            // musicGayBar1
+            // 
+            musicGayBar1.BackColor = Color.FromArgb(15, 15, 15);
+            musicGayBar1.Dock = DockStyle.Bottom;
+            musicGayBar1.Location = new Point(0, 0);
+            musicGayBar1.Name = "musicGayBar1";
+            musicGayBar1.Size = new Size(1229, 96);
+            musicGayBar1.TabIndex = 0;
             // 
             // panelDeti
             // 
@@ -121,7 +133,7 @@
             panelDeti.Dock = DockStyle.Fill;
             panelDeti.Location = new Point(202, 2);
             panelDeti.Name = "panelDeti";
-            panelDeti.Size = new Size(1029, 499);
+            panelDeti.Size = new Size(1029, 503);
             panelDeti.TabIndex = 2;
             // 
             // musicItemArea
@@ -132,7 +144,7 @@
             musicItemArea.Margin = new Padding(0);
             musicItemArea.Name = "musicItemArea";
             musicItemArea.Padding = new Padding(5);
-            musicItemArea.Size = new Size(1029, 499);
+            musicItemArea.Size = new Size(1029, 503);
             musicItemArea.TabIndex = 0;
             // 
             // Form1
@@ -152,6 +164,7 @@
             panelMediaSubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonplay).EndInit();
+            panelDown.ResumeLayout(false);
             panelDeti.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -167,5 +180,6 @@
         private Panel panelMediaSubMenu;
         private PictureBox pictureBox2;
         private PictureBox buttonplay;
+        private MusicGayBar musicGayBar1;
     }
 }
