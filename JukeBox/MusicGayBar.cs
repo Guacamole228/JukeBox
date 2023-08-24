@@ -35,7 +35,7 @@ namespace JukeBox
 
         public void PlayPause(MusicItem track)
         {
-            
+
             if (wave != null)
             {
                 wave.Dispose();
@@ -43,9 +43,30 @@ namespace JukeBox
             }
             wave = new WaveOut();
             reader = new AudioFileReader(track.File);
+            Play();
+
+        }
+
+        void Play()
+        {
             wave.Init(reader);
             wave.Play();
+            musicplaytimer.Start();
             start = true;
+            TimeSpan end = reader.TotalTime;
+            endTime.Text = $"{end:mm}:{end:ss}";
+        }
+
+
+
+        private void musicplaytimer_Tick(object sender, EventArgs e)
+        {
+            TimeSpan current = reader.CurrentTime;
+            currentTime.Text = $"{current:mm}:{current:ss} ";
+
+            float timePercent =(float)(reader.CurrentTime / reader.TotalTime * 100);
+            TrackBar.ColumnStyles[0].Width = timePercent;
+            TrackBar.ColumnStyles[1].Width = 100 - timePercent;
         }
     }
 }

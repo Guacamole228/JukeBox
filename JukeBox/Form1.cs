@@ -86,5 +86,7 @@ namespace JukeBox
             DetiForm.BringToFront();
             DetiForm.Show();
         }
+
+
     }
 }

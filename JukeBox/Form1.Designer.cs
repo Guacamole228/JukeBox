@@ -55,7 +55,7 @@
             panelLeft.Location = new Point(2, 2);
             panelLeft.Name = "panelLeft";
             panelLeft.Padding = new Padding(5);
-            panelLeft.Size = new Size(200, 503);
+            panelLeft.Size = new Size(200, 465);
             panelLeft.TabIndex = 0;
             // 
             // panelMediaSubMenu
@@ -113,18 +113,18 @@
             // 
             panelDown.Controls.Add(musicGayBar1);
             panelDown.Dock = DockStyle.Bottom;
-            panelDown.Location = new Point(2, 505);
+            panelDown.Location = new Point(2, 467);
             panelDown.Name = "panelDown";
-            panelDown.Size = new Size(1229, 96);
+            panelDown.Size = new Size(1247, 134);
             panelDown.TabIndex = 1;
             // 
             // musicGayBar1
             // 
             musicGayBar1.BackColor = Color.FromArgb(15, 15, 15);
             musicGayBar1.Dock = DockStyle.Bottom;
-            musicGayBar1.Location = new Point(0, 0);
+            musicGayBar1.Location = new Point(0, 6);
             musicGayBar1.Name = "musicGayBar1";
-            musicGayBar1.Size = new Size(1229, 96);
+            musicGayBar1.Size = new Size(1247, 128);
             musicGayBar1.TabIndex = 0;
             // 
             // panelDeti
@@ -133,7 +133,7 @@
             panelDeti.Dock = DockStyle.Fill;
             panelDeti.Location = new Point(202, 2);
             panelDeti.Name = "panelDeti";
-            panelDeti.Size = new Size(1029, 503);
+            panelDeti.Size = new Size(1047, 465);
             panelDeti.TabIndex = 2;
             // 
             // musicItemArea
@@ -144,7 +144,7 @@
             musicItemArea.Margin = new Padding(0);
             musicItemArea.Name = "musicItemArea";
             musicItemArea.Padding = new Padding(5);
-            musicItemArea.Size = new Size(1029, 503);
+            musicItemArea.Size = new Size(1047, 465);
             musicItemArea.TabIndex = 0;
             // 
             // Form1
@@ -152,7 +152,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(1233, 603);
+            ClientSize = new Size(1251, 603);
             Controls.Add(panelDeti);
             Controls.Add(panelLeft);
             Controls.Add(panelDown);

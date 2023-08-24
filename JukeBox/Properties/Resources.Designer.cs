@@ -63,6 +63,26 @@ namespace JukeBox.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap levo1 {
+            get {
+                object obj = ResourceManager.GetObject("levo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap levo11 {
+            get {
+                object obj = ResourceManager.GetObject("levo11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap media_player_icon_png {
             get {
                 object obj = ResourceManager.GetObject("media-player-icon-png", resourceCulture);
@@ -76,6 +96,16 @@ namespace JukeBox.Properties {
         internal static System.Drawing.Bitmap omnom {
             get {
                 object obj = ResourceManager.GetObject("omnom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pravo1 {
+            get {
+                object obj = ResourceManager.GetObject("pravo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
